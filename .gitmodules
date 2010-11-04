@@ -1,0 +1,3 @@
+[submodule "Externals/TouchJSON"]
+	path = Externals/TouchJSON
+	url = https://github.com/schwa/TouchJSON.git
