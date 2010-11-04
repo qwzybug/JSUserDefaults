@@ -20,8 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-    // Override point for customization after application launch.
-
+	NSArray *testArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:5], nil];
+	NSDictionary *testDictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"bar", @"foo", @"baz", @"gaz", nil];
+	[[NSUserDefaults standardUserDefaults] setObject:testArray forKey:@"TestArray"];
+	[[NSUserDefaults standardUserDefaults] setObject:testDictionary forKey:@"TestDictionary"];
+	
     // Add the view controller's view to the window and display.
     [self.window addSubview:viewController.view];
     [self.window makeKeyAndVisible];

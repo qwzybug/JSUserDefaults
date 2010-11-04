@@ -8,6 +8,12 @@
 
 #import "JSUserDefaultsWebView.h"
 
+#import "CJSONSerializer.h"
+#import "CJSONDeserializer.h"
+
+#import "CJSONSerializer_StringExtensions.h"
+#import "CJSONDeserializer_StringExtensions.h"
+
 @interface JSUserDefaultsWebView ()
 
 @property (nonatomic, assign) id<UIWebViewDelegate> originalDelegate;
@@ -67,8 +73,10 @@
 	
 	if ([command isEqual:@"get"]) {
 		NSString *key = [query objectForKey:@"key"];
-		NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-		NSString *callback = [NSString stringWithFormat:@"JSUserDefaults.callback('%@', '%@');", key, value];
+		NSString *jsonKey = [[CJSONSerializer serializer] serializeObject:key asStringWithEncoding:NSUTF8StringEncoding error:nil];
+		id value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+		NSString *jsonValue = [[CJSONSerializer serializer] serializeObject:value asStringWithEncoding:NSUTF8StringEncoding error:nil];
+		NSString *callback = [NSString stringWithFormat:@"JSUserDefaults.callback(%@, %@);", jsonKey, jsonValue];
 		[self stringByEvaluatingJavaScriptFromString:callback];
 	}
 	else if ([command isEqual:@"set"]) {
@@ -85,8 +93,16 @@
 	for (NSString *component in components) {
 		NSArray *keyValue = [component componentsSeparatedByString:@"="];
 		if (keyValue.count != 2) continue;
-		NSString *key = [keyValue objectAtIndex:0];
-		NSString *value = [keyValue objectAtIndex:1];
+		NSString *key = [[keyValue objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSString *value = [[keyValue objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		
+		NSError *err = nil;
+		value = [[CJSONDeserializer deserializer] deserializeString:value withEncoding:NSUTF8StringEncoding error:&err];
+		if (!value) {
+			NSLog(@"Error: %@", [err localizedDescription]);
+			return nil;
+		}
+		
 		[dictionary setObject:value forKey:key];
 	}
 	return dictionary;

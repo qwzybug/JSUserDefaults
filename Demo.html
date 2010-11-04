@@ -16,12 +16,36 @@
     var setAction = function() {
       var key = document.getElementById('keyField').value;
       var value = document.getElementById('valueField').value;
+      // var value = {foo:'bar', baz:['raz','gaz',5]};
       JSUserDefaults.setValueForKey(key, value);
     }
     var getAction = function() {
       var key = document.getElementById('keyField').value;
       var value = JSUserDefaults.valueForKey(key);
       document.getElementById('valueField').value = value;
+    }
+    
+    var test = function() {
+      var testArray = JSUserDefaults.valueForKey('TestArray');
+      var elems = [1, 2, 5]
+      var p = document.getElementById('test');
+      p.innerText = p.innerText + "TestArray: ";
+      p.innerText = p.innerText + ((testArray.length == 3) ? 'OK ' : 'FAIL ');
+      for (i = 0; i < 3; i++) {
+        p.innerText = p.innerText + (elems[i] == testArray[i] ? ' OK ' : ' FAIL ');
+      }
+      
+      var testDictionary = JSUserDefaults.valueForKey('TestDictionary');
+      elems = {'foo' : 'bar', 'gaz':'baz'};
+      p.innerText = p.innerText + "\nTestDictionary: ";
+      p.innerText = p.innerText + JSON.stringify(elems);
+      p.innerText = p.innerText + JSON.stringify(testDictionary);
+      // p.innerText = p.innerText + ((keys(testDictionary) == keys(elems)) ? 'OK' : 'FAIL');
+      // p.innerText = p.innerText + JSON.stringify(keys(testDictionary));
+      for (i in elems) {
+        p.innerText = p.innerText + i + elems[i] + testDictionary[i];
+        p.innerText = p.innerText + ((elems[i] == testDictionary[i]) ? ' OK ' : ' FAIL ');
+      }
     }
   </script>
   <body>
@@ -37,5 +61,7 @@
       <input type="button" onclick="setAction()" value="Set" />
       <input type="button" onclick="getAction()" value="Get" />
     </p>
+    <input type="button" onclick="test()" value="Test" />
+    <p id="test"></p>
   </body>
 </html>
