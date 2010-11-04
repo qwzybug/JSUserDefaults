@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <meta name="viewport" content="width=device-width">
+  <style type="text/css">
+    body {
+      font-family: Helvetica;
+      font-size: 14pt;
+    }
+    label {
+      display: inline-block;
+      width: 100px;
+      text-align: right;
+    }
+  </style>
+  <script type="text/javascript">
+    var setAction = function() {
+      var key = document.getElementById('keyField').value;
+      var value = document.getElementById('valueField').value;
+      JSUserDefaults.setValueForKey(key, value);
+    }
+    var getAction = function() {
+      var key = document.getElementById('keyField').value;
+      var value = JSUserDefaults.valueForKey(key);
+      document.getElementById('valueField').value = value;
+    }
+  </script>
+  <body>
+    <p>
+      <label for="keyField">Key:</label>
+      <input type="text" id="keyField" />
+    </p>
+    <p>
+      <label for="valueField">Value:</label>
+      <input type="text" id="valueField" />
+    </p>
+    <p style="text-align: center">
+      <input type="button" onclick="setAction()" value="Set" />
+      <input type="button" onclick="getAction()" value="Get" />
+    </p>
+  </body>
+</html>
