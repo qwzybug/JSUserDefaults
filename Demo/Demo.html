@@ -16,16 +16,16 @@
     var setAction = function() {
       var key = document.getElementById('keyField').value;
       var value = document.getElementById('valueField').value;
-      JSUserDefaults.setValueForKey(key, value);
+      JSUserDefaults.setObjectForKey(key, value);
     }
     var getAction = function() {
       var key = document.getElementById('keyField').value;
-      var value = JSUserDefaults.valueForKey(key);
+      var value = JSUserDefaults.objectForKey(key);
       document.getElementById('valueField').value = value;
     }
     
     var test = function() {
-      var testArray = JSUserDefaults.valueForKey('TestArray');
+      var testArray = JSUserDefaults.objectForKey('TestArray');
       var elems = [1, 2, 5]
       var p = document.getElementById('test');
       p.innerText = p.innerText + "TestArray: ";
@@ -34,7 +34,7 @@
         p.innerText = p.innerText + (elems[i] == testArray[i] ? ' OK ' : ' FAIL ');
       }
       
-      var testDictionary = JSUserDefaults.valueForKey('TestDictionary');
+      var testDictionary = JSUserDefaults.objectForKey('TestDictionary');
       elems = {'foo' : 'bar', 'gaz':'baz'};
       p.innerText = p.innerText + "\nTestDictionary: ";
       for (i in elems) {
@@ -44,7 +44,7 @@
     }
 	
 	var load = function() {
-	  document.getElementById('test').innerText = JSUserDefaults.valueForKey('Foo');
+	  document.getElementById('test').innerText = JSUserDefaults.objectForKey('Foo');
 	}
   </script>
   <body onload="load()">

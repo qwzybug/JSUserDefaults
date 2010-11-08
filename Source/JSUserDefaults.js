@@ -1,7 +1,7 @@
 var JSUserDefaults = {
   results: {},
   iframes: {},
-  setValueForKey: function(key, value) {
+  setObjectForKey: function(key, value) {
     var url = "NSUserDefaults://set?key=" + JSON.stringify(key) + "&value=" + JSON.stringify(value);
     iframe = document.createElement('iframe');
     iframe.style.display = 'none';
@@ -9,7 +9,7 @@ var JSUserDefaults = {
     document.body.appendChild(iframe);
     document.body.removeChild(iframe);
   },
-  valueForKey: function(key) {
+  objectForKey: function(key) {
     this.iframes[key] = document.createElement('iframe');
     this.iframes[key].style.display = 'none';
     var url = "NSUserDefaults://get?key=" + JSON.stringify(key);
@@ -24,4 +24,3 @@ var JSUserDefaults = {
     delete this.iframes[key];
   }
 }
-if (JSUserDefaultsLoaded) { JSUserDefaultsLoaded(); }
