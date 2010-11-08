@@ -55,9 +55,9 @@
 	};
 	0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1067, 1547}}";
-			sepNavSelRange = "{1516, 0}";
-			sepNavVisRange = "{894, 2063}";
+			sepNavIntBoundsRect = "{{0, 0}, {1067, 1443}}";
+			sepNavSelRange = "{3531, 5}";
+			sepNavVisRange = "{1766, 1910}";
 			sepNavWindowFrame = "{{15, 4}, {1126, 742}}";
 		};
 	};
@@ -107,38 +107,7 @@
 			sepNavWindowFrame = "{{15, 4}, {694, 737}}";
 		};
 	};
-	0381FB7F12834DAC00E7D2EE /* CJSONSerializer_StringExtensions.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1067, 627}}";
-			sepNavSelRange = "{280, 0}";
-			sepNavVisRange = "{0, 399}";
-			sepNavWindowFrame = "{{15, 65}, {1040, 676}}";
-		};
-	};
-	0381FB8012834DAC00E7D2EE /* CJSONSerializer_StringExtensions.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1067, 627}}";
-			sepNavSelRange = "{268, 112}";
-			sepNavVisRange = "{0, 615}";
-			sepNavWindowFrame = "{{15, 4}, {1126, 742}}";
-		};
-	};
-	0381FB8712834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {981, 561}}";
-			sepNavSelRange = "{286, 111}";
-			sepNavVisRange = "{0, 403}";
-		};
-	};
-	0381FB8812834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {981, 561}}";
-			sepNavSelRange = "{487, 0}";
-			sepNavVisRange = "{0, 496}";
-			sepNavWindowFrame = "{{38, 44}, {1040, 676}}";
-		};
-	};
-	0381FB931283502200E7D2EE /* JSUserDefaultsWebView.m:76 */ = {
+	0381FB931283502200E7D2EE /* JSUserDefaultsWebView.m:70 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -150,13 +119,13 @@
 		functionName = "-webView:shouldStartLoadWithRequest:navigationType:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 76;
+		lineNumber = 70;
 		location = JSUserDefaults;
 		modificationTime = 310596720.377383;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	0381FBA61283508100E7D2EE /* JSUserDefaultsWebView.m:109 */ = {
+	0381FBA61283508100E7D2EE /* JSUserDefaultsWebView.m:103 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -168,7 +137,7 @@
 		functionName = "-dictionaryForQueryString:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 109;
+		lineNumber = 103;
 		location = JSUserDefaults;
 		modificationTime = 310596720.377471;
 		originalNumberOfMultipleMatches = 1;
@@ -212,8 +181,8 @@
 			1D6058900D05DD3D006BFB54 /* JSUserDefaults */,
 		);
 		breakpoints = (
-			0381FB931283502200E7D2EE /* JSUserDefaultsWebView.m:76 */,
-			0381FBA61283508100E7D2EE /* JSUserDefaultsWebView.m:109 */,
+			0381FB931283502200E7D2EE /* JSUserDefaultsWebView.m:70 */,
+			0381FBA61283508100E7D2EE /* JSUserDefaultsWebView.m:103 */,
 		);
 		codeSenseManager = 0381FA7012833D9900E7D2EE /* Code sense */;
 		executables = (

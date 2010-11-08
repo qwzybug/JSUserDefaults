@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032BA96612884F7C0066F66A /* CJSONDeserializer_StringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 032BA96312884F7C0066F66A /* CJSONDeserializer_StringExtensions.m */; };
+		032BA96712884F7C0066F66A /* CJSONSerializer_StringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 032BA96512884F7C0066F66A /* CJSONSerializer_StringExtensions.m */; };
 		0381FA7312833DA100E7D2EE /* JSUserDefaultsWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */; };
 		0381FA7712833DD200E7D2EE /* JSUserDefaults.js in Resources */ = {isa = PBXBuildFile; fileRef = 0381FA7612833DD200E7D2EE /* JSUserDefaults.js */; };
 		0381FA7A12833E2600E7D2EE /* Demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 0381FA7912833E2600E7D2EE /* Demo.html */; };
@@ -21,8 +23,6 @@
 		0381FB7A12834CA500E7D2EE /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB6C12834CA500E7D2EE /* CJSONDeserializer.m */; };
 		0381FB7B12834CA500E7D2EE /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB6E12834CA500E7D2EE /* CJSONScanner.m */; };
 		0381FB7C12834CA500E7D2EE /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB7012834CA500E7D2EE /* CJSONSerializer.m */; };
-		0381FB8112834DAC00E7D2EE /* CJSONSerializer_StringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB8012834DAC00E7D2EE /* CJSONSerializer_StringExtensions.m */; };
-		0381FB8912834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0381FB8812834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.m */; };
 		1D3623260D0F684500981E51 /* JSUserDefaultsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* JSUserDefaultsAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -34,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		032BA96212884F7C0066F66A /* CJSONDeserializer_StringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_StringExtensions.h; sourceTree = "<group>"; };
+		032BA96312884F7C0066F66A /* CJSONDeserializer_StringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_StringExtensions.m; sourceTree = "<group>"; };
+		032BA96412884F7C0066F66A /* CJSONSerializer_StringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer_StringExtensions.h; sourceTree = "<group>"; };
+		032BA96512884F7C0066F66A /* CJSONSerializer_StringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer_StringExtensions.m; sourceTree = "<group>"; };
 		0381FA7112833DA100E7D2EE /* JSUserDefaultsWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSUserDefaultsWebView.h; path = ../../Source/JSUserDefaultsWebView.h; sourceTree = "<group>"; };
 		0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSUserDefaultsWebView.m; path = ../../Source/JSUserDefaultsWebView.m; sourceTree = "<group>"; };
 		0381FA7612833DD200E7D2EE /* JSUserDefaults.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = JSUserDefaults.js; path = ../Source/JSUserDefaults.js; sourceTree = "<group>"; };
@@ -61,10 +65,6 @@
 		0381FB6F12834CA500E7D2EE /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
 		0381FB7012834CA500E7D2EE /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		0381FB7112834CA500E7D2EE /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
-		0381FB7F12834DAC00E7D2EE /* CJSONSerializer_StringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer_StringExtensions.h; sourceTree = "<group>"; };
-		0381FB8012834DAC00E7D2EE /* CJSONSerializer_StringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer_StringExtensions.m; sourceTree = "<group>"; };
-		0381FB8712834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_StringExtensions.h; sourceTree = "<group>"; };
-		0381FB8812834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_StringExtensions.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* JSUserDefaultsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSUserDefaultsAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* JSUserDefaultsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSUserDefaultsAppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032BA96112884F7C0066F66A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				032BA96212884F7C0066F66A /* CJSONDeserializer_StringExtensions.h */,
+				032BA96312884F7C0066F66A /* CJSONDeserializer_StringExtensions.m */,
+				032BA96412884F7C0066F66A /* CJSONSerializer_StringExtensions.h */,
+				032BA96512884F7C0066F66A /* CJSONSerializer_StringExtensions.m */,
+			);
+			name = Extensions;
+			path = ../Source/Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
 		0381FB5512834C7400E7D2EE /* Externals */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,16 +173,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				032BA96112884F7C0066F66A /* Extensions */,
 				1D3623240D0F684500981E51 /* JSUserDefaultsAppDelegate.h */,
 				1D3623250D0F684500981E51 /* JSUserDefaultsAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* JSUserDefaultsViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* JSUserDefaultsViewController.m */,
 				0381FA7112833DA100E7D2EE /* JSUserDefaultsWebView.h */,
 				0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */,
-				0381FB7F12834DAC00E7D2EE /* CJSONSerializer_StringExtensions.h */,
-				0381FB8012834DAC00E7D2EE /* CJSONSerializer_StringExtensions.m */,
-				0381FB8712834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.h */,
-				0381FB8812834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -305,8 +314,8 @@
 				0381FB7A12834CA500E7D2EE /* CJSONDeserializer.m in Sources */,
 				0381FB7B12834CA500E7D2EE /* CJSONScanner.m in Sources */,
 				0381FB7C12834CA500E7D2EE /* CJSONSerializer.m in Sources */,
-				0381FB8112834DAC00E7D2EE /* CJSONSerializer_StringExtensions.m in Sources */,
-				0381FB8912834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.m in Sources */,
+				032BA96612884F7C0066F66A /* CJSONDeserializer_StringExtensions.m in Sources */,
+				032BA96712884F7C0066F66A /* CJSONSerializer_StringExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

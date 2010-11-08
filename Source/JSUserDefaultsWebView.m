@@ -29,7 +29,6 @@
 
 - (void)setValue:(id)value forKey:(id)key;
 {
-	NSLog(@"Setting %@ for key %@", value, key);
 	if ([key isEqual:@"delegate"]) {
 		if (value != self) {
 			self.originalDelegate = value;
@@ -44,13 +43,8 @@
 	}
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView;
-{
-}
-
 - (void)webViewDidStartLoad:(UIWebView *)webView;
 {
-	NSLog(@"Start load!");
 	static NSString *sUserDefaultsJS = nil;
 	if (!sUserDefaultsJS) {
 		NSString *path = [[NSBundle mainBundle] pathForResource:@"JSUserDefaults" ofType:@"js"];
