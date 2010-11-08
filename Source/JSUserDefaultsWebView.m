@@ -43,18 +43,8 @@
 	}
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView;
-{
-	static NSString *sUserDefaultsJS = nil;
-	if (!sUserDefaultsJS) {
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"JSUserDefaults" ofType:@"js"];
-		sUserDefaultsJS = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] retain];
-	}
-	[self stringByEvaluatingJavaScriptFromString:sUserDefaultsJS];
-	
-	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webViewDidStartLoad:)])
-		[self.originalDelegate webViewDidStartLoad:webView];
-}
+#pragma mark -
+#pragma mark Web view delegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
 {
@@ -84,6 +74,34 @@
 	
 	return false;
 }
+
+- (void)webViewDidStartLoad:(UIWebView *)webView;
+{
+	static NSString *sUserDefaultsJS = nil;
+	if (!sUserDefaultsJS) {
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"JSUserDefaults" ofType:@"js"];
+		sUserDefaultsJS = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] retain];
+	}
+	[self stringByEvaluatingJavaScriptFromString:sUserDefaultsJS];
+	
+	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webViewDidStartLoad:)])
+		[self.originalDelegate webViewDidStartLoad:webView];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webView:didFailLoadWithError:)])
+		[self.originalDelegate webView:webView didFailLoadWithError:error];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webViewDidFinishLoad:)])
+		[self.originalDelegate webViewDidFinishLoad:webView];
+}
+
+#pragma mark -
+#pragma mark Support
 
 - (NSDictionary *)dictionaryForQueryString:(NSString *)query;
 {
