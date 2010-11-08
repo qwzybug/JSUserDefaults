@@ -1,0 +1,230 @@
+// !$*UTF8*$!
+{
+	0381FA6512833D9400E7D2EE /* JSUserDefaults */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = JSUserDefaults;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	0381FA6F12833D9900E7D2EE /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	0381FA7012833D9900E7D2EE /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	0381FA7112833DA100E7D2EE /* JSUserDefaultsWebView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {819, 650}}";
+			sepNavSelRange = "{28, 0}";
+			sepNavVisRange = "{0, 270}";
+		};
+	};
+	0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1067, 1547}}";
+			sepNavSelRange = "{1516, 0}";
+			sepNavVisRange = "{894, 2063}";
+			sepNavWindowFrame = "{{15, 4}, {1126, 742}}";
+		};
+	};
+	0381FA7612833DD200E7D2EE /* JSUserDefaults.js */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {819, 650}}";
+			sepNavSelRange = "{939, 0}";
+			sepNavVisRange = "{0, 939}";
+			sepNavWindowFrame = "{{294, 4}, {878, 742}}";
+		};
+	};
+	0381FA7912833E2600E7D2EE /* Demo.html */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {642, 871}}";
+			sepNavSelRange = "{1542, 0}";
+			sepNavVisRange = "{402, 1819}";
+			sepNavWindowFrame = "{{15, 9}, {654, 737}}";
+		};
+	};
+	0381FB6B12834CA500E7D2EE /* CJSONDeserializer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {999, 676}}";
+			sepNavSelRange = "{1761, 63}";
+			sepNavVisRange = "{215, 1761}";
+		};
+	};
+	0381FB6C12834CA500E7D2EE /* CJSONDeserializer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {981, 1664}}";
+			sepNavSelRange = "{1456, 34}";
+			sepNavVisRange = "{954, 837}";
+			sepNavWindowFrame = "{{61, 23}, {1040, 676}}";
+		};
+	};
+	0381FB6F12834CA500E7D2EE /* CJSONSerializer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 622}}";
+			sepNavSelRange = "{1516, 15}";
+			sepNavVisRange = "{0, 1968}";
+		};
+	};
+	0381FB7012834CA500E7D2EE /* CJSONSerializer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {649, 3718}}";
+			sepNavSelRange = "{1402, 32}";
+			sepNavVisRange = "{755, 1442}";
+			sepNavWindowFrame = "{{15, 4}, {694, 737}}";
+		};
+	};
+	0381FB7F12834DAC00E7D2EE /* CJSONSerializer_StringExtensions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1067, 627}}";
+			sepNavSelRange = "{280, 0}";
+			sepNavVisRange = "{0, 399}";
+			sepNavWindowFrame = "{{15, 65}, {1040, 676}}";
+		};
+	};
+	0381FB8012834DAC00E7D2EE /* CJSONSerializer_StringExtensions.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1067, 627}}";
+			sepNavSelRange = "{268, 112}";
+			sepNavVisRange = "{0, 615}";
+			sepNavWindowFrame = "{{15, 4}, {1126, 742}}";
+		};
+	};
+	0381FB8712834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {981, 561}}";
+			sepNavSelRange = "{286, 111}";
+			sepNavVisRange = "{0, 403}";
+		};
+	};
+	0381FB8812834E6E00E7D2EE /* CJSONDeserializer_StringExtensions.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {981, 561}}";
+			sepNavSelRange = "{487, 0}";
+			sepNavVisRange = "{0, 496}";
+			sepNavWindowFrame = "{{38, 44}, {1040, 676}}";
+		};
+	};
+	0381FB931283502200E7D2EE /* JSUserDefaultsWebView.m:76 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */;
+		functionName = "-webView:shouldStartLoadWithRequest:navigationType:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 76;
+		location = JSUserDefaults;
+		modificationTime = 310596720.377383;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	0381FBA61283508100E7D2EE /* JSUserDefaultsWebView.m:109 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */;
+		functionName = "-dictionaryForQueryString:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 109;
+		location = JSUserDefaults;
+		modificationTime = 310596720.377471;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	1D3623250D0F684500981E51 /* JSUserDefaultsAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 1092}}";
+			sepNavSelRange = "{931, 0}";
+			sepNavVisRange = "{385, 795}";
+			sepNavWindowFrame = "{{15, 4}, {1126, 742}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* JSUserDefaults */ = {
+		activeExec = 0;
+		executables = (
+			0381FA6512833D9400E7D2EE /* JSUserDefaults */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* JSUserDefaultsViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {635, 645}}";
+			sepNavSelRange = "{314, 0}";
+			sepNavVisRange = "{0, 321}";
+			sepNavWindowFrame = "{{350, 9}, {694, 737}}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* JSUserDefaultsViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {635, 622}}";
+			sepNavSelRange = "{593, 0}";
+			sepNavVisRange = "{0, 599}";
+			sepNavWindowFrame = "{{15, 4}, {694, 737}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 0381FA6512833D9400E7D2EE /* JSUserDefaults */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* JSUserDefaults */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* JSUserDefaults */,
+		);
+		breakpoints = (
+			0381FB931283502200E7D2EE /* JSUserDefaultsWebView.m:76 */,
+			0381FBA61283508100E7D2EE /* JSUserDefaultsWebView.m:109 */,
+		);
+		codeSenseManager = 0381FA7012833D9900E7D2EE /* Code sense */;
+		executables = (
+			0381FA6512833D9400E7D2EE /* JSUserDefaults */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 310922989;
+			PBXWorkspaceStateSaveDate = 310922989;
+		};
+		sourceControlManager = 0381FA6F12833D9900E7D2EE /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+}

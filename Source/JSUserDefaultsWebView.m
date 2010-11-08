@@ -46,6 +46,11 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView;
 {
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView;
+{
+	NSLog(@"Start load!");
 	static NSString *sUserDefaultsJS = nil;
 	if (!sUserDefaultsJS) {
 		NSString *path = [[NSBundle mainBundle] pathForResource:@"JSUserDefaults" ofType:@"js"];
@@ -53,8 +58,8 @@
 	}
 	[self stringByEvaluatingJavaScriptFromString:sUserDefaultsJS];
 	
-	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webViewDidFinishLoad:)])
-		[self.originalDelegate webViewDidFinishLoad:webView];
+	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webViewDidStartLoad:)])
+		[self.originalDelegate webViewDidStartLoad:webView];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;

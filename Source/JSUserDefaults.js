@@ -24,3 +24,4 @@ var JSUserDefaults = {
     delete this.iframes[key];
   }
 }
+if (JSUserDefaultsLoaded) { JSUserDefaultsLoaded(); }

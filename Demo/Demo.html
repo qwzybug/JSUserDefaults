@@ -42,8 +42,13 @@
         p.innerText = p.innerText + ((elems[i] == testDictionary[i]) ? ' OK ' : ' FAIL ');
       }
     }
+	
+	var load = function() {
+	  document.getElementById('test').innerText = JSUserDefaults.valueForKey('Foo');
+	}
   </script>
-  <body>
+  <body onload="load()">
+	<img src="http://www.google.com/logos/2010/xraydiscovery2010-ps.gif" />
     <p>
       <label for="keyField">Key:</label>
       <input type="text" id="keyField" />

@@ -34,9 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0381FA7112833DA100E7D2EE /* JSUserDefaultsWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSUserDefaultsWebView.h; sourceTree = "<group>"; };
-		0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSUserDefaultsWebView.m; sourceTree = "<group>"; };
-		0381FA7612833DD200E7D2EE /* JSUserDefaults.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSUserDefaults.js; sourceTree = "<group>"; };
+		0381FA7112833DA100E7D2EE /* JSUserDefaultsWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSUserDefaultsWebView.h; path = ../../Source/JSUserDefaultsWebView.h; sourceTree = "<group>"; };
+		0381FA7212833DA100E7D2EE /* JSUserDefaultsWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSUserDefaultsWebView.m; path = ../../Source/JSUserDefaultsWebView.m; sourceTree = "<group>"; };
+		0381FA7612833DD200E7D2EE /* JSUserDefaults.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = JSUserDefaults.js; path = ../Source/JSUserDefaults.js; sourceTree = "<group>"; };
 		0381FA7912833E2600E7D2EE /* Demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Demo.html; sourceTree = "<group>"; };
 		0381FB5812834CA500E7D2EE /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
 		0381FB5912834CA500E7D2EE /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
@@ -99,7 +99,8 @@
 			children = (
 				0381FB5712834CA500E7D2EE /* TouchJSON */,
 			);
-			path = Externals;
+			name = Externals;
+			path = ../Externals;
 			sourceTree = "<group>";
 		};
 		0381FB5712834CA500E7D2EE /* TouchJSON */ = {
