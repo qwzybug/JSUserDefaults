@@ -50,6 +50,9 @@
 {
 	NSURL *url = [request URL];
 	
+	NSString *command = [url host];
+	NSDictionary *query = [self dictionaryForQueryString:[url query]];
+	
 	if (![url.scheme isEqual:@"NSUserDefaults"]) {
 		if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webView:shouldStartLoadWithRequest:navigationType:)])
 			return [self.originalDelegate webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
@@ -57,10 +60,7 @@
 			return YES;
 	}
 	
-	NSString *command = [url host];
-	NSDictionary *query = [self dictionaryForQueryString:[url query]];
-	
-	if ([command isEqual:@"get"]) {
+	else if ([command isEqual:@"get"]) {
 		NSString *key = [query objectForKey:@"key"];
 		NSString *jsonKey = [[CJSONSerializer serializer] serializeObject:key asStringWithEncoding:NSUTF8StringEncoding error:nil];
 		id value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
@@ -72,17 +72,12 @@
 		[[NSUserDefaults standardUserDefaults] setObject:[query objectForKey:@"value"] forKey:[query objectForKey:@"key"]];
 	}
 	
-	return false;
+	return NO;
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView;
 {
-	static NSString *sUserDefaultsJS = nil;
-	if (!sUserDefaultsJS) {
-		NSString *path = [[NSBundle mainBundle] pathForResource:@"JSUserDefaults" ofType:@"js"];
-		sUserDefaultsJS = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] retain];
-	}
-	[self stringByEvaluatingJavaScriptFromString:sUserDefaultsJS];
+	[self inject];
 	
 	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webViewDidStartLoad:)])
 		[self.originalDelegate webViewDidStartLoad:webView];
@@ -96,12 +91,24 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+//	[self inject];
+	
 	if (self.originalDelegate && [self.originalDelegate respondsToSelector:@selector(webViewDidFinishLoad:)])
 		[self.originalDelegate webViewDidFinishLoad:webView];
 }
 
 #pragma mark -
 #pragma mark Support
+
+- (void)inject;
+{
+	static NSString *sUserDefaultsJS = nil;
+	if (!sUserDefaultsJS) {
+		NSString *path = [[NSBundle mainBundle] pathForResource:@"JSUserDefaults" ofType:@"js"];
+		sUserDefaultsJS = [[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] retain];
+	}
+	[self stringByEvaluatingJavaScriptFromString:sUserDefaultsJS];
+}
 
 - (NSDictionary *)dictionaryForQueryString:(NSString *)query;
 {

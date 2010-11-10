@@ -14,5 +14,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 
+- (IBAction)reloadAction:(id)sender;
+
 @end
 

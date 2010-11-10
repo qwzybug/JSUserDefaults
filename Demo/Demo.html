@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="JSUserDefaults.js"></script>
   <style type="text/css">
     body {
       font-family: Helvetica;
@@ -63,5 +64,6 @@
     </p>
     <input type="button" onclick="test()" value="Test" />
     <p id="test"></p>
+	<script type="text/javascript">document.write(JSUserDefaults.objectForKey('Foo'));</script>
   </body>
 </html>

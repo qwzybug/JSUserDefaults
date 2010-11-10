@@ -26,4 +26,9 @@
 	[self.webView loadRequest:req];
 }
 
+- (IBAction)reloadAction:(id)sender;
+{
+	[self.webView reload];
+}
+
 @end
